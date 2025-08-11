@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import AboutUs from './components/AboutUs';
-import ServicesSection from './components/Services';
+import Navbar from './sections/Navbar';
+import Hero from './sections/Hero';
+import AboutUs from './sections/AboutUs';
+import ServicesSection from './sections/Services';
+import OurWorkSection from './sections/OurWork';
 
 export default function Home() {
   return (
@@ -11,6 +11,7 @@ export default function Home() {
       <Hero />
       <AboutUs />
       <ServicesSection />
+      <OurWorkSection />
     </>
   );
 }

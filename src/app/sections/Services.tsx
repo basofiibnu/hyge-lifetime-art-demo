@@ -88,7 +88,7 @@ const ServicesSection = () => {
 
   return (
     <section className="relative overflow-hidden w-full bg-[#FAFAFA] xl:px-20 xl:py-[120px]">
-      <div className=" max-w-[1440px] mx-auto flex flex-col items-center gap-24">
+      <div className="max-w-[1440px] mx-auto flex flex-col items-center gap-24">
         {/* Section title */}
         <motion.div
           initial="hidden"
