@@ -5,6 +5,7 @@ import ServicesSection from './sections/Services';
 import OurWorkSection from './sections/OurWork';
 import TestimonialsSection from './sections/Testimonial';
 import FAQSection from './sections/Faq';
+import ContactSection from './sections/Footer';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <OurWorkSection />
       <TestimonialsSection />
       <FAQSection />
+      <ContactSection />
     </>
   );
 }
