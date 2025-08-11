@@ -37,7 +37,7 @@ export function ProjectCard({
   return (
     <motion.div
       variants={cardVariants}
-      className={`rounded-xl p-8  overflow-hidden ${
+      className={`rounded-xl p-5 sm:p-8  overflow-hidden ${
         dark ? 'bg-black text-white' : 'bg-[#E9ECF2] text-[#101014]'
       }`}
     >
@@ -56,7 +56,7 @@ export function ProjectCard({
         </div>
 
         {/* Text Content */}
-        <div className="flex flex-col justify-center gap-6 w-full">
+        <div className="mt-10 sm:mt-0 flex flex-col justify-center gap-6 w-full">
           <div className="flex flex-col w-full gap-3.5">
             <h3 className="text-[40px] font-medium leading-12 tracking-[-1px]">
               {title}

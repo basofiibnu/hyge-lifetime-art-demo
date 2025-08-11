@@ -15,7 +15,7 @@ export function TestimonialCard({
 }: Readonly<TestimonialCardProps>) {
   return (
     <div
-      className={`${bg} hover:bg-[#E9ECF2] transition-colors flex flex-col items-start justify-between rounded-xl shadow-sm p-8 w-full sm:max-w-[342px] h-auto min-h-[315px] shrink-0 mx-0 lg:mx-2 border border-[#E6E6E6]`}
+      className={`${bg} hover:bg-[#E9ECF2] transition-colors flex flex-col items-start justify-between rounded-xl shadow-sm p-8 w-ful max-w-[295px] sm:max-w-[342px] h-auto min-h-[315px] shrink-0 mx-0 lg:mx-2 border border-[#E6E6E6]`}
     >
       <div>
         <div className="flex gap-1 mb-4">
@@ -25,7 +25,7 @@ export function TestimonialCard({
             </span>
           ))}
         </div>
-        <p className="text-[#3D3D47] text-base font-normal leading-7 tracking-[-0.1px]">
+        <p className="text-[#3D3D47] text-sm sm:text-base font-normal leading-7 tracking-[-0.1px]">
           {text}
         </p>
       </div>

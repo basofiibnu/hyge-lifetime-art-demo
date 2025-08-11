@@ -4,6 +4,7 @@
 import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import InfiniteMarquee from '../components/InfiniteMarquee';
+import { Slider } from '../components/Slider';
 
 const images = [
   '/about1.png',
@@ -61,9 +62,9 @@ export default function AboutUs() {
   };
 
   return (
-    <section className="relative  overflow-hidden w-full">
-      <div className="sm:px-10 xl:px-20 sm:py-[120px] max-w-[1440px] mx-auto">
-        <div className="flex sm:items-start lg:items-center justify-center gap-20">
+    <section className="relative overflow-hidden w-full">
+      <div className="px-10 xl:px-20 py-[120px] max-w-[1440px] mx-auto">
+        <div className="flex flex-col sm:flex-row sm:items-start lg:items-center justify-center gap-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -74,7 +75,7 @@ export default function AboutUs() {
             <span className="px-3 py-2 bg-[#28282C] rounded-full text-base font-semibold leading-3.5 text-white w-fit">
               About us
             </span>
-            <h2 className="text-5xl font-medium leading-14 text-[#101014] tracking-[-0.8px] max-w-[60%]">
+            <h2 className="text-[40px] sm:text-5xl font-medium leading-14 text-[#101014] tracking-[-0.8px] max-w-[60%]">
               Home Improvement Specialists
             </h2>
           </motion.div>
@@ -103,13 +104,13 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <div className="relative h-full overflow-hidden bg-white w-screen">
+      <div className="hidden sm:block relative h-full overflow-hidden bg-white w-screen">
         <InfiniteMarquee direction="left" speed={120}>
           {duplicatedSlides.map((slide, i) => (
             <motion.div
               key={i}
               variants={cardVariants}
-              className="relative flex-shrink-0 sm:w-[320px] sm:h-[400px] lg:w-[400px] lg:h-[500px] overflow-hidden"
+              className="relative flex-shrink-0 w-[320px] h-[400px] lg:w-[400px] lg:h-[500px] overflow-hidden"
             >
               <Image
                 src={slide}
@@ -121,8 +122,33 @@ export default function AboutUs() {
           ))}
         </InfiniteMarquee>
       </div>
-      <div className="sm:px-20 sm:py-[120px] max-w-[1440px] w-full mx-auto">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-[120px] text-left">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.3,
+          ease: 'easeOut',
+          delay: 0.1,
+        }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="block sm:hidden"
+      >
+        <Slider
+          items={images}
+          renderItem={(t) => (
+            <div className="pb-32 w-[320px] h-[400px] overflow-hidden">
+              <Image
+                src={t}
+                alt={`About image ${t}`}
+                fill
+                className="object-cover"
+              />
+            </div>
+          )}
+        />
+      </motion.div>
+      <div className="px-10 sm:px-20 py-[120px] max-w-[1440px] w-full mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[120px] text-left">
           {stats.map((stat, i) => (
             <motion.div
               key={i}

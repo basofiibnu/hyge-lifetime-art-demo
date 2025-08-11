@@ -87,7 +87,7 @@ const ServicesSection = () => {
   };
 
   return (
-    <section className="relative overflow-hidden w-full bg-[#FAFAFA] sm:px-20 sm:py-[120px]">
+    <section className="relative overflow-hidden w-full bg-[#FAFAFA] px-10 sm:px-20 py-[120px]">
       <div className="max-w-[1440px] mx-auto flex flex-col items-center gap-24">
         {/* Section title */}
         <motion.div
@@ -110,9 +110,9 @@ const ServicesSection = () => {
         </motion.div>
 
         {/* Layout */}
-        <div className="flex items-center gap-20 w-full">
+        <div className="flex flex-col sm:flex-row items-center gap-20 w-full">
           {/* Image panel */}
-          <div className="relative w-full h-full sm:min-h-[493px] md:min-h-[639px] lg:min-h-[685px] 2xl:min-h-[777px]">
+          <div className="relative w-full h-full min-h-[337px] sm:min-h-[493px] md:min-h-[639px] lg:min-h-[685px] 2xl:min-h-[777px]">
             {services.map((service, idx) =>
               activeIndex === idx ? (
                 <motion.div

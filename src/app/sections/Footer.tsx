@@ -12,7 +12,7 @@ export default function ContactSection() {
     <section className="bg-white px-5 2xl:px-0">
       <div className="max-w-[1440px] mx-auto bg-[#101014] text-white rounded-xl">
         {/* Contact Section */}
-        <div className="p-20 grid md:grid-cols-2 gap-24">
+        <div className="px-5 py-[60px] md:px-20 md:py-20 grid sm:grid-cols-2 gap-24">
           {/* Left Side */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -35,7 +35,7 @@ export default function ContactSection() {
               </p>
             </div>
             <div className="flex flex-col gap-4 items-start">
-              <div className="flex items-center gap-3">
+              <div className="flex flex-col items-start sm:flex-row sm:items-center gap-3">
                 <span className="font-semibold text-lg text-white tracking-[-0.1px] leading-[30px]">
                   Office
                 </span>
@@ -43,19 +43,21 @@ export default function ContactSection() {
                   150 Old Park Ln, London W1K 1QZ
                 </span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-col items-start sm:flex-row sm:items-center gap-3">
                 <span className="font-semibold text-lg text-white tracking-[-0.1px] leading-[30px]">
                   Email
                 </span>
-                <span>
+                <span className="text-[#D0D1DB] text-lg font-normal leading-[30px] tracking-[-0.1px]">
                   <a href="mailto:hello@refit.com">hello@refit.com</a>
                 </span>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-col items-start sm:flex-row sm:items-center gap-3">
                 <span className="font-semibold text-lg text-white tracking-[-0.1px] leading-[30px]">
                   Telephone
                 </span>
-                <span>07716 534984</span>
+                <span className="text-[#D0D1DB] text-lg font-normal leading-[30px] tracking-[-0.1px]">
+                  07716 534984
+                </span>
               </div>
             </div>
             <div className="flex flex-col gap-4 items-start">
@@ -137,8 +139,8 @@ export default function ContactSection() {
       </div>
 
       <footer className="mt-4">
-        <div className="max-w-[1440px] mx-auto bg-[#101014] text-white rounded-t-xl p-20 flex flex-col gap-10">
-          <div className="flex justify-between w-full items-start">
+        <div className="max-w-[1440px] mx-auto bg-[#101014] text-white rounded-t-xl px-5 py-[60px] md:px-20 md:py-20 flex flex-col gap-10">
+          <div className="flex flex-col sm:flex-row sm:justify-between w-full items-start gap-10 sm:gap-0">
             <div className="flex items-center gap-2">
               <Image
                 src="/logo.svg"

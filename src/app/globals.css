@@ -24,3 +24,12 @@ body {
   color: var(--foreground);
   font-family: 'Manrope', sans-serif;
 }
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #101014 !important;
+}

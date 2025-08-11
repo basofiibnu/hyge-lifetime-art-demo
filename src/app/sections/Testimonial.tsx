@@ -3,6 +3,7 @@
 import { motion, Variants } from 'framer-motion';
 import InfiniteMarquee from '../components/InfiniteMarquee';
 import { TestimonialCard } from '../components/TestimonialCard';
+import { Slider } from '../components/Slider';
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -43,7 +44,7 @@ export default function TestimonialsSection() {
       variants={fadeUp}
       className="flex flex-col w-full gap-24 mb-[120px]"
     >
-      <div className="text-center flex flex-col gap-2 items-center">
+      <div className="text-center flex flex-col gap-2 items-center  px-10 sm:px-0">
         <span className="px-3 py-2 bg-[#28282C] rounded-full text-white text-base leading-3.5 font-semibold">
           Testimonials
         </span>
@@ -56,7 +57,7 @@ export default function TestimonialsSection() {
         </p>
       </div>
 
-      <div className="flex flex-col w-full gap-12">
+      <div className="hidden sm:flex flex-col w-full gap-12">
         <InfiniteMarquee direction="left" speed={60}>
           {duplicatedTestimonials.map((t, i) => (
             <TestimonialCard key={i} {...t} />
@@ -65,9 +66,19 @@ export default function TestimonialsSection() {
 
         <InfiniteMarquee direction="right" speed={60}>
           {duplicatedTestimonials.map((t, i) => (
-            <TestimonialCard key={i} {...t} bg="bg-gray-100" />
+            <TestimonialCard key={i} {...t} />
           ))}
         </InfiniteMarquee>
+      </div>
+      <div className="block sm:hidden px-10">
+        <Slider
+          items={duplicatedTestimonials}
+          renderItem={(t) => (
+            <div className="pb-20">
+              <TestimonialCard {...t} />
+            </div>
+          )}
+        />
       </div>
     </motion.section>
   );

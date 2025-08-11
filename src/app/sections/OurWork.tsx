@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ProjectCard } from '../components/ProjectCard';
+import { Slider } from '../components/Slider';
 
 interface Project {
   category: string;
@@ -67,7 +68,7 @@ const containerVariants = {
 
 export default function OurWorkSection() {
   return (
-    <section className="relative overflow-hidden w-full sm:px-10 lg:px-20 sm:py-[120px]">
+    <section className="relative overflow-hidden w-full px-10 lg:px-20 py-[120px]">
       <div className="max-w-[1440px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -93,7 +94,7 @@ export default function OurWorkSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="flex flex-col sm:gap-5 lg:gap-10"
+          className="hidden sm:flex flex-col sm:gap-5 lg:gap-10"
         >
           {projects.map((project) => (
             <div
@@ -103,6 +104,23 @@ export default function OurWorkSection() {
               <ProjectCard {...project} />
             </div>
           ))}
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="block sm:hidden"
+        >
+          <Slider
+            items={projects}
+            renderItem={(t) => (
+              <div className="pb-20">
+                <ProjectCard {...t} />
+              </div>
+            )}
+          />
         </motion.div>
       </div>
     </section>
