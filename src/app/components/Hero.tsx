@@ -2,37 +2,38 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-// import { ArrowUpRight } from 'lucide-react';
+import { Pill } from '../svgs/pill';
+import { ArrowUpRight } from '../svgs/arrow-right-up';
 
 export default function Hero() {
   return (
-    <section className="bg-[#111111] min-h-screen flex items-center justify-center px-10">
-      <div className="max-w-[1440px] mx-auto grid grid-cols-2 gap-12 items-center">
+    <section className="bg-[#111111] min-h-screen w-full flex items-center justify-center">
+      <div className="mx-auto grid max-w-[1440px] xl:px-20 xl:py-8 w-full grid-cols-2 gap-12 items-center">
         {/* Left Content */}
-        <div className="text-white">
+        <div className="text-white flex flex-col gap-1">
           {/* Status Pill */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="inline-flex items-center gap-2 bg-[#1A1A1A] px-4 py-1 rounded-full mb-8"
-          >
-            <span className="w-2.5 h-2.5 rounded-full bg-green-400"></span>
-            <span className="text-sm font-medium">
-              Available for work
-            </span>
-          </motion.div>
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="flex items-center gap-[6px] bg-[#28282C] px-3 py-2 rounded-full w-fit"
+            >
+              <Pill />
+              <span className="text-sm font-normal text-[#D0D1DB] leading-3.5">
+                Available for work
+              </span>
+            </motion.div>
+          </div>
 
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-[56px] font-normal leading-tight tracking-tight mb-6"
+            className="xl:max-w-[547px] text-[56px] font-normal leading-16 tracking-[-1px] mb-5"
           >
-            Your trusted partner
-            <br /> for quality home
-            <br /> improvement
+            Your trusted partner for quality home improvement
           </motion.h1>
 
           {/* Description */}
@@ -40,7 +41,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-lg text-gray-400 mb-8 max-w-lg"
+            className="text-xl text-[#D0D1DB] font-normal leading-8 mb-8 xl:max-w-[482px] tracking-[-0.3px]"
           >
             LifetimeArt delivers expert home improvements, creating
             beautiful and functional spaces with quality
@@ -48,16 +49,22 @@ export default function Hero() {
           </motion.p>
 
           {/* CTA Button */}
-          <motion.a
-            href="#contact"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="inline-flex items-center gap-2 bg-[#1A1A1A] px-6 py-3 rounded-full text-white font-medium hover:bg-[#2A2A2A] transition-colors"
-          >
-            Work with us
-            {/* <ArrowUpRight size={18} /> */}
-          </motion.a>
+          <div>
+            <motion.a
+              href="#contact"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="flex items-center gap-6 bg-[#ffffff1a] px-4 py-[10px] w-fit rounded-full hover:bg-black transition-all"
+            >
+              <span className="font-medium text-base leading-5 text-white">
+                Work with us
+              </span>
+              <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                <ArrowUpRight />
+              </div>
+            </motion.a>
+          </div>
         </div>
 
         {/* Right Image */}
@@ -68,11 +75,11 @@ export default function Hero() {
           className="relative rounded-[12px] overflow-hidden"
         >
           <Image
-            src="/hero.svg" // Replace with actual image from Figma
+            src="/hero.svg"
             alt="Hero Image"
             width={700}
-            height={800}
-            className="rounded-[12px] object-cover"
+            height={835.5}
+            className="xl:max-w-[652.72px] object-cover "
             priority
           />
         </motion.div>
