@@ -5,11 +5,11 @@ import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 
 const images = [
-  '/about1.svg',
-  '/about2.svg',
-  '/about3.svg',
-  '/about4.svg',
-  '/about5.svg',
+  '/about1.png',
+  '/about2.png',
+  '/about3.png',
+  '/about4.png',
+  '/about5.png',
 ];
 
 const stats = [

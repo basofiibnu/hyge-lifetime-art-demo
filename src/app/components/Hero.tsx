@@ -2,16 +2,14 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Pill } from '../svgs/pill';
-import { ArrowUpRight } from '../svgs/arrow-right-up';
+import { Pill } from '../assets/svgs/pill';
+import { ArrowUpRight } from '../assets/svgs/arrow-right-up';
 
 export default function Hero() {
   return (
-    <section className="bg-[#111111] min-h-screen w-full flex items-center justify-center">
+    <section className="bg-[#111111]  w-full flex items-center justify-center">
       <div className="mx-auto grid max-w-[1440px] xl:px-20 xl:py-8 w-full grid-cols-2 gap-12 items-center">
-        {/* Left Content */}
         <div className="text-white flex flex-col gap-1">
-          {/* Status Pill */}
           <div>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -26,7 +24,6 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -36,7 +33,6 @@ export default function Hero() {
             Your trusted partner for quality home improvement
           </motion.h1>
 
-          {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -48,7 +44,6 @@ export default function Hero() {
             craftsmanship.
           </motion.p>
 
-          {/* CTA Button */}
           <div>
             <motion.a
               href="#contact"
@@ -67,7 +62,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Image */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
@@ -75,7 +69,7 @@ export default function Hero() {
           className="relative rounded-[12px] overflow-hidden"
         >
           <Image
-            src="/hero.svg"
+            src="/hero.png"
             alt="Hero Image"
             width={700}
             height={835.5}
