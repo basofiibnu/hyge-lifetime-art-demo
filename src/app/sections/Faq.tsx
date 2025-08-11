@@ -52,8 +52,8 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="relative overflow-hidden w-full xl:px-20 xl:py-[120px]">
-      <div className="max-w-[1440px] mx-auto grid md:grid-cols-5 gap-20 px-20">
+    <section className="relative overflow-hidden w-full sm:pb-[60px] lg:px-20 lg:py-[120px]">
+      <div className="max-w-[1440px] mx-auto flex flex-col lg:grid lg:grid-cols-5 gap-20 sm:px-10 lg:px-20 sm:justify-center sm:items-center lg:items-start lg:justify-start">
         {/* Left Side */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -62,8 +62,8 @@ export default function FAQSection() {
           transition={{ duration: 0.5 }}
           className="col-span-2 xl:max-w-[400px] flex flex-col items-start gap-14"
         >
-          <div className="flex flex-col gap-4 items-start">
-            <div className="flex flex-col gap-2 items-start">
+          <div className="flex flex-col gap-4 sm:items-center lg:items-start">
+            <div className="flex flex-col gap-2 sm:items-center lg:items-start">
               <span className="px-3 py-2 bg-[#28282C] rounded-full text-white text-base leading-3.5 font-semibold">
                 FAQs
               </span>
@@ -76,7 +76,7 @@ export default function FAQSection() {
             </p>
           </div>
 
-          <div>
+          <div className="w-full flex sm:justify-center lg:justify-start">
             <motion.a
               href="#contact"
               initial={{ opacity: 0, y: 20 }}
@@ -86,7 +86,7 @@ export default function FAQSection() {
               className="flex items-center gap-6 px-4 py-[10px] w-fit rounded-full transition-all"
               style={{
                 background:
-                  'linear-gradient(0deg, rgba(16, 16, 20, 0.10) 0%, rgba(16, 16, 20, 0.10) 100%), rgba(255, 255, 255, 0.10);',
+                  'linear-gradient(0deg, rgba(16, 16, 20, 0.10) 0%, rgba(16, 16, 20, 0.10) 100%), rgba(255, 255, 255, 0.10)',
                 backdropFilter: 'blur(5px)',
               }}
             >

@@ -38,7 +38,7 @@ export default function InfiniteMarquee({
       className="overflow-hidden w-screen"
     >
       <motion.div
-        className="flex items-center gap-6"
+        className="flex items-center sm:gap-4 lg:gap-6"
         style={{ width: 'max-content' }}
         animate={{
           x: direction === 'left' ? ['0%', '-50%'] : ['-50%', '0%'],

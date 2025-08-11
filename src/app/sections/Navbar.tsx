@@ -17,7 +17,7 @@ export default function Navbar() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="absolute top-0 left-0 w-full z-50"
+      className="sm:relative sm:bg-black sm:px-[30px] sm:py-10 lg:p-0 lg:bg-transparent lg:absolute lg:top-0 lg:left-0 w-full lg:z-50"
     >
       <div className="flex xl:px-20 xl:py-10 items-center max-w-[1440px] justify-between mx-auto">
         {/* Logo */}

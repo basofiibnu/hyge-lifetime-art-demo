@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 export default function ContactSection() {
   return (
-    <section className="bg-white">
+    <section className="bg-white px-5 2xl:px-0">
       <div className="max-w-[1440px] mx-auto bg-[#101014] text-white rounded-xl">
         {/* Contact Section */}
         <div className="p-20 grid md:grid-cols-2 gap-24">

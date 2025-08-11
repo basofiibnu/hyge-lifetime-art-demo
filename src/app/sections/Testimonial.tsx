@@ -50,7 +50,7 @@ export default function TestimonialsSection() {
         <h2 className="text-[#101014] text-5xl font-medium leading-14 tracking-[-0.8px]">
           Hear from our clients
         </h2>
-        <p className="text-[#3D3D47] mt-2 text-xl leading-[34px] tracking-[-0.3px] xl:max-w-[16%]">
+        <p className="text-[#3D3D47] mt-2 text-xl leading-[34px] tracking-[-0.3px] max-w-[550px]">
           Hear from our happy clients about their experience working
           with Refit and the quality of our craftsmanship.
         </p>

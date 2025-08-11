@@ -62,8 +62,8 @@ export default function AboutUs() {
 
   return (
     <section className="relative  overflow-hidden w-full">
-      <div className="xl:px-20 xl:py-[120px] max-w-[1440px] mx-auto">
-        <div className="flex items-center justify-center  gap-20">
+      <div className="sm:px-10 xl:px-20 sm:py-[120px] max-w-[1440px] mx-auto">
+        <div className="flex sm:items-start lg:items-center justify-center gap-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -109,7 +109,7 @@ export default function AboutUs() {
             <motion.div
               key={i}
               variants={cardVariants}
-              className="relative flex-shrink-0 w-[400px] h-[500px] overflow-hidden"
+              className="relative flex-shrink-0 sm:w-[320px] sm:h-[400px] lg:w-[400px] lg:h-[500px] overflow-hidden"
             >
               <Image
                 src={slide}
@@ -121,8 +121,8 @@ export default function AboutUs() {
           ))}
         </InfiniteMarquee>
       </div>
-      <div className="xl:px-20 xl:py-[120px] max-w-[1440px] w-full mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-[120px] text-left">
+      <div className="sm:px-20 sm:py-[120px] max-w-[1440px] w-full mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-[120px] text-left">
           {stats.map((stat, i) => (
             <motion.div
               key={i}

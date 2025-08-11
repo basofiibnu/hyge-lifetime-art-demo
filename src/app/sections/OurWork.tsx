@@ -67,7 +67,7 @@ const containerVariants = {
 
 export default function OurWorkSection() {
   return (
-    <section className="relative overflow-hidden w-full xl:px-20 xl:py-[120px]">
+    <section className="relative overflow-hidden w-full sm:px-10 lg:px-20 sm:py-[120px]">
       <div className="max-w-[1440px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -93,12 +93,12 @@ export default function OurWorkSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="flex flex-col gap-10"
+          className="flex flex-col sm:gap-5 lg:gap-10"
         >
           {projects.map((project) => (
             <div
               key={project.title}
-              className="my-[10px] xl:my-[230px]"
+              className="sm:my-0 xl:my-[230px]"
             >
               <ProjectCard {...project} />
             </div>

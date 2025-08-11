@@ -37,7 +37,7 @@ export function ProjectCard({
   return (
     <motion.div
       variants={cardVariants}
-      className={`rounded-xl p-8 overflow-hidden flex flex-col md:flex-row xl:gap-20 ${
+      className={`rounded-xl p-8 overflow-hidden flex flex-col md:flex-row sm:gap-10 lg:gap-20 ${
         dark ? 'bg-black text-white' : 'bg-[#E9ECF2] text-[#101014]'
       }`}
     >
