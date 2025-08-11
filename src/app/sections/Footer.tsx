@@ -143,7 +143,7 @@ export default function ContactSection() {
           <div className="flex flex-col sm:flex-row sm:justify-between w-full items-start gap-10 sm:gap-0">
             <div className="flex items-center gap-2">
               <Image
-                src="/logo.svg"
+                src="/Logo.svg"
                 alt="LifetimeArt Logo"
                 width={154}
                 height={37}

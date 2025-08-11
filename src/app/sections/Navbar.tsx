@@ -26,7 +26,7 @@ export default function Navbar() {
       <div className="hidden sm:flex xl:px-20 xl:py-10 items-center max-w-[1440px] justify-between mx-auto">
         {/* Logo */}
         <Image
-          src="/logo.svg"
+          src="/Logo.svg"
           alt="LifetimeArt Logo"
           width={154}
           height={37}
@@ -51,7 +51,7 @@ export default function Navbar() {
       {/* Mobile Nav */}
       <div className="flex sm:hidden justify-between items-center px-6 py-4">
         <Image
-          src="/logo.svg"
+          src="/Logo.svg"
           alt="LifetimeArt Logo"
           width={154}
           height={32}
@@ -79,7 +79,7 @@ export default function Navbar() {
             {/* Top Row */}
             <div className="flex justify-between items-center px-10 pt-8">
               <Image
-                src="/logo.svg"
+                src="/Logo.svg"
                 alt="LifetimeArt Logo"
                 width={154}
                 height={32}
