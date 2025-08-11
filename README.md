@@ -59,6 +59,15 @@ Example:
 
 ---
 
+## Mobile Animation Approach
+
+- **Scroll-triggered fade and motion:** Used Framer Motion's `whileInView` to fade and slide elements upward when they enter the viewport, ensuring smooth engagement on mobile devices.
+- **One-by-one staggered animations:** Applied `staggerChildren` inside a container variant so project cards appear in sequence rather than all at once.
+- **Responsive slider fallback:** On mobile (`sm:hidden`), replaced the static layout with a reusable `Slider` component for swipe-based navigation.
+- **Viewport thresholds for control:** Adjusted `viewport.amount` values to fine-tune when animations start, balancing early triggering with visual smoothness.
+- **Lightweight performance:** Limited animations to trigger once (`once: true`) to avoid re-running on every scroll, improving performance on mobile.
+
+
 ## 🎨 Custom Pagination Styling
 
 **CSS (globals.css):**
