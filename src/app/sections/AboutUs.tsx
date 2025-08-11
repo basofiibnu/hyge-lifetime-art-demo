@@ -3,6 +3,7 @@
 
 import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
+import InfiniteMarquee from '../components/InfiniteMarquee';
 
 const images = [
   '/about1.png',
@@ -49,15 +50,6 @@ export default function AboutUs() {
     ...images,
     ...images,
   ];
-
-  const containerVariants: Variants = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
 
   const cardVariants: Variants = {
     hidden: { opacity: 0, y: 0 },
@@ -112,41 +104,22 @@ export default function AboutUs() {
       </div>
 
       <div className="relative h-full overflow-hidden bg-white w-screen">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          className="overflow-hidden w-screen"
-        >
-          <motion.div
-            className="flex items-center gap-6"
-            style={{ width: 'max-content' }}
-            animate={{
-              x: ['0%', '-100%'],
-            }}
-            transition={{
-              ease: 'linear',
-              duration: 60,
-              repeat: Infinity,
-            }}
-          >
-            {duplicatedSlides.map((slide, index) => (
-              <motion.div
-                key={index}
-                variants={cardVariants}
-                className="relative flex-shrink-0 w-[400px] h-[500px] overflow-hidden"
-              >
-                <Image
-                  src={slide}
-                  alt={`About image ${index + 1}`}
-                  fill
-                  className="object-cover"
-                />
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
+        <InfiniteMarquee direction="left" speed={120}>
+          {duplicatedSlides.map((slide, i) => (
+            <motion.div
+              key={i}
+              variants={cardVariants}
+              className="relative flex-shrink-0 w-[400px] h-[500px] overflow-hidden"
+            >
+              <Image
+                src={slide}
+                alt={`About image ${i + 1}`}
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+          ))}
+        </InfiniteMarquee>
       </div>
       <div className="xl:px-20 xl:py-[120px] max-w-[1440px] w-full mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-[120px] text-left">
