@@ -16,42 +16,42 @@ const services: Service[] = [
     title: 'Kitchens',
     description:
       'At LifetimeArt, we design and build stunning kitchens tailored to your style and needs. Whether you prefer sleek modern lines or a timeless, classic look, our team delivers premium craftsmanship, functional layouts, and meticulous attention to detail—creating a kitchen you’ll love to cook and gather in.',
-    image: '/services.png',
+    image: '/kitchenpic.png',
     icon: '/kitchen.svg',
   },
   {
     title: 'Loft Conversions',
     description:
       'Transform unused loft space into a beautiful, practical part of your home. From cozy bedrooms to bright home offices, we handle everything from structural adjustments to finishing touches, ensuring your new space is safe, stylish, and seamlessly integrated with your existing home.',
-    image: '/services.png',
+    image: '/loftpic.png',
     icon: '/loft.svg',
   },
   {
     title: 'Bathrooms',
     description:
       'We create bathrooms that balance relaxation and practicality, with designs ranging from spa-inspired retreats to minimalist, functional spaces. Our team sources high-quality fixtures and finishes, ensuring durability, elegance, and comfort for years to come.',
-    image: '/services.png',
+    image: '/bathroompic.png',
     icon: '/bathroom.svg',
   },
   {
     title: 'Extensions',
     description:
       'Expand your living space without compromising on style. Whether it’s a kitchen extension, a new family room, or an entire additional floor, we work closely with you to design and build an extension that complements your home and adds value.',
-    image: '/services.png',
+    image: '/extensionpic.png',
     icon: '/extensions.svg',
   },
   {
     title: 'Restorations',
     description:
       'Preserve the charm of your property while upgrading it for modern living. Our restoration work combines traditional craftsmanship with modern techniques to breathe new life into historic or worn-down spaces.',
-    image: '/services.png',
+    image: '/restorationpic.png',
     icon: '/restorations.svg',
   },
   {
     title: 'External Works',
     description:
       'Enhance the beauty and functionality of your outdoor areas. From garden landscaping to patios, pathways, and exterior lighting, we create inviting spaces that connect your home to nature.',
-    image: '/services.png',
+    image: '/externalpic.png',
     icon: '/external.svg',
   },
 ];

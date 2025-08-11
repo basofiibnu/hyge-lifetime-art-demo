@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LifetimeArt Website Components
 
-## Getting Started
+This project contains reusable UI components for the LifetimeArt website, including:
+- Responsive navigation bar with mobile menu
+- Testimonial card component
+- Reusable Swiper-based slider
+- Custom pagination styling
+- Tailwind configuration for custom breakpoints
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📦 Components
+
+### 1. **Navbar**
+- Built with **Next.js**, **TailwindCSS**, and **Framer Motion** for animations.
+- Responsive design:
+  - Desktop: logo + horizontal nav links
+  - Mobile: hamburger → overlay menu based on design screenshot
+- Mobile menu uses gradient overlay background + close button.
+
+---
+
+### 2. **TestimonialCard**
+A reusable card for displaying customer testimonials.
+
+**Props:**
+```ts
+interface TestimonialCardProps {
+  text: string;
+  author: string;
+  avatar: string;
+  bg?: string; // Optional background color
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Features:**
+- 5-star rating display
+- Author avatar + name
+- Configurable background color
+- Hover background change
+- Rounded borders + subtle shadow
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. **Reusable Slider Component**
+- Built with [Swiper](https://swiperjs.com/) and TailwindCSS.
+- Accepts an **array of data** and **children render function** for flexibility.
+- Supports:
+  - Clickable pagination bullets
+  - Custom bullet styling
+  - Responsive behavior for multiple breakpoints
 
-## Learn More
+Example:
+```tsx
+<Slider data={testimonials}>
+  {(item) => <TestimonialCard {...item} />}
+</Slider>
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Custom Pagination Styling
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**CSS (globals.css):**
+```css
+.swiper-pagination-bullet {
+  @apply w-2 h-2 mx-1 bg-gray-400 rounded-full opacity-60 transition-all duration-300;
+}
 
-## Deploy on Vercel
+.swiper-pagination-bullet-active {
+  @apply bg-black opacity-100;
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📱 Tailwind Custom Breakpoints
+
+**tailwind.config.js:**
+```js
+module.exports = {
+  theme: {
+    screens: {
+      xs: '375px',
+      sm: '1024px',
+      md: '1280px',
+      lg: '1440px',
+      xl: '1960px',
+    },
+  },
+};
+```
+
+> Example: `sm` styles apply from **1024px and above**; below that defaults to `xs`.
+
+---
+
+## 🚀 Getting Started
+
+### Install dependencies:
+```bash
+npm install
+```
+
+### Run the dev server:
+```bash
+npm run dev
+```
+
+### Build for production:
+```bash
+npm run build
+```
+
+---
+
+## 🛠 Tech Stack
+- [Next.js](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Swiper](https://swiperjs.com/)
+
+---
+
+## 📄 License
+MIT
